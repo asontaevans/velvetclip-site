@@ -48,10 +48,24 @@ summary{cursor:pointer;font-weight:600}
 details p{color:var(--muted);margin:10px 0 0}
 .ph{background:#fff3cd;border:1px dashed #d4a72c;padding:0 4px;border-radius:4px;font-size:.95em}
 footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+.tier{display:flex;flex-direction:column}.tier .tag{align-self:flex-start}.tier ul.check{flex:1}.tier .btn{text-align:center;margin-top:8px}
+.fine{font-size:14px;color:var(--muted);margin-top:16px}
+form.intake{display:grid;gap:12px;grid-template-columns:1fr 1fr;max-width:720px;margin:6px 0 4px}
+form.intake label{display:flex;flex-direction:column;gap:4px;font-size:14px;font-weight:600;color:var(--ink)}
+form.intake .full{grid-column:1/-1}
+form.intake input,form.intake textarea{font-size:16px;line-height:1.4;font-family:inherit;padding:11px 12px;border:1px solid #d9cfd5;border-radius:10px;background:#fff;color:var(--ink)}
+form.intake textarea{min-height:84px;resize:vertical}
+form.intake button{border:0;cursor:pointer;justify-self:start}
+@media(max-width:640px){form.intake{grid-template-columns:1fr}}
+.or-pay{margin-top:22px;padding-top:18px;border-top:1px dashed #e3cbd8}
 </style>
 <link rel="icon" href="logo.png">
 <meta property="og:image" content="https://velvetclip.com/og.png">
 <meta name="theme-color" content="#4a1e3a">
+<!-- ANALYTICS PLACEHOLDER (inactive, nothing loads). Recommended: GoatCounter (free, cookieless).
+     Needs a goatcounter.com account created by Asonta. Then replace this comment with:
+     <script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+     Buttons below already carry data-goatcounter-click names, so clicks are counted as events once it's live. -->
 </head>
 <body>
 <header><div class="wrap">
@@ -104,22 +118,41 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
   <p class="sub">USD, billed monthly. Month-to-month, cancel with 30 days' notice. You keep every video we make.</p>
   <div class="grid">
     <div class="card tier"><h3>Starter</h3><div class="price">$597<small>/mo</small></div>
-      <ul class="check"><li>12 short videos / month</li><li>Instagram Reels + TikTok</li><li>Content plan, captions, hashtags</li><li>Monthly written report</li></ul></div>
+      <ul class="check"><li>12 short videos / month</li><li>Instagram Reels + TikTok</li><li>Content plan, captions, hashtags</li><li>Monthly written report</li></ul>
+      <a class="btn ghost" href="https://buy.stripe.com/14A5kC4K43Cq6U0a6T3sI00" data-goatcounter-click="stripe-starter">Start Starter</a></div>
     <div class="card tier featured"><span class="tag">Most popular</span><h3>Growth</h3><div class="price">$897<small>/mo</small></div>
-      <ul class="check"><li>20 short videos / month</li><li>IG, TikTok, FB Reels, YouTube Shorts</li><li>1 promo/event mini-campaign</li><li>2 ad-ready cuts</li><li>Monthly report + 20-min call</li></ul></div>
+      <ul class="check"><li>20 short videos / month</li><li>IG, TikTok, FB Reels, YouTube Shorts</li><li>1 promo/event mini-campaign</li><li>2 ad-ready cuts</li><li>Monthly report + 20-min call</li></ul>
+      <a class="btn" href="https://buy.stripe.com/bJe9ASa4o4Guemsa6T3sI02" data-goatcounter-click="stripe-growth">Start Growth</a></div>
     <div class="card tier"><h3>Pro</h3><div class="price">$1,297<small>/mo</small></div>
-      <ul class="check"><li>30 short videos / month</li><li>All 4 platforms + 2nd location account</li><li>2 promo mini-campaigns</li><li>4 ad-ready cuts</li><li>Monthly report + 30-min call</li></ul></div>
+      <ul class="check"><li>30 short videos / month</li><li>All 4 platforms + 2nd location account</li><li>2 promo mini-campaigns</li><li>4 ad-ready cuts</li><li>Monthly report + 30-min call</li></ul>
+      <a class="btn ghost" href="https://buy.stripe.com/4gM5kCccwa0Odio5QD3sI03" data-goatcounter-click="stripe-pro">Start Pro</a></div>
   </div>
+  <p class="fine">Secure checkout by Stripe. Not sure yet? <a href="#start">Get 3 free sample videos</a> first. By subscribing you agree to our <a href="/terms/">Terms</a>.</p>
 </div></section>
 
 <section id="start"><div class="wrap">
   <div class="pilot">
     <h2>Try it first: 3 free sample videos</h2>
-    <p class="sub" style="margin-bottom:18px">We'll make 3 short videos for your spa, with your name, services and style. No card, no call required. If you like them, your first month of Starter is <strong>$297</strong>. If not, keep the videos.</p>
-    <a class="btn" href="mailto:hello@velvetclip.com?subject=Free%20sample%20videos%20for%20my%20med%20spa">Request my 3 free samples</a>
-    <p style="font-size:14px;color:var(--muted);margin-top:14px">Or email <a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a></p>
+    <p class="sub" style="margin-bottom:18px">We'll make 3 short videos for your spa, with your name, services and style. No card, no call required. If you like them, you can start with a <strong>$297 pilot month</strong> (one-time payment, no auto-renewal). If not, keep the videos.</p>
+    <form class="intake" id="intake" action="mailto:hello@velvetclip.com?subject=Free%20sample%20videos%20for%20my%20med%20spa" method="post" enctype="text/plain" data-goatcounter-click="intake-submit">
+      <label>Your name<input name="name" autocomplete="name" required></label>
+      <label>Spa name<input name="spa" autocomplete="organization" required></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      <label>City, state<input name="city" placeholder="e.g. Austin, TX"></label>
+      <label class="full">Website or Instagram<input name="site" placeholder="yourspa.com or @yourspa"></label>
+      <label class="full">Services to feature (optional)<textarea name="services" placeholder="e.g. Botox, HydraFacial, a fall promo"></textarea></label>
+      <button class="btn full" type="submit">Request my 3 free samples</button>
+    </form>
+    <p class="fine" id="intake-note">Submitting opens your email app with your details filled in; just press send. No email app? Write to <a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a>. We use your details only to make and send your samples (<a href="/privacy/">Privacy</a>).</p>
+    <div class="or-pay">
+      <p style="margin:0 0 10px"><strong>Already seen our samples?</strong> Start the pilot month now.</p>
+      <a class="btn ghost" href="https://buy.stripe.com/bJe00i5O8dd0fqwgvh3sI04" data-goatcounter-click="stripe-pilot">Start the $297 pilot</a>
+    </div>
   </div>
 </div></section>
+<script>
+(function(){var f=document.getElementById('intake');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(f),L=[['Name','name'],['Spa','spa'],['Email','email'],['City, state','city'],['Website / Instagram','site'],['Services to feature','services']],b='Hi VelvetClip, please make 3 free sample videos for my spa.\n\n';L.forEach(function(x){b+=x[0]+': '+(d.get(x[1])||'')+'\n'});var sub='Free sample videos for '+(d.get('spa')||'my med spa');window.location.href='mailto:hello@velvetclip.com?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(b);document.getElementById('intake-note').innerHTML='<strong>Your email app should open now with everything filled in. Press send and we\'ll reply within one US business day.</strong> Nothing opened? Email <a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a>.';});})();
+</script>
 
 <section id="faq"><div class="wrap">
   <h2>FAQ</h2>
@@ -133,7 +166,7 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
 </main>
 
 <footer><div class="wrap">
-  <p>© 2026 VelvetClip · <a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a></p>
+  <p>© 2026 VelvetClip · <a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
   <p>Independent service. Not affiliated with Instagram, TikTok, YouTube, Facebook or Runway. We do not provide medical advice.</p>
 </div></footer>
 </body>
