@@ -5,169 +5,641 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VelvetClip — Done-for-you short-form video for med spas</title>
 <meta name="description" content="We plan, produce and post Reels, TikToks and Shorts for independent med spas. You approve once a week.">
+<link rel="canonical" href="https://velvetclip.com/">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap"></noscript>
 <style>
-:root{--ink:#1d1b20;--muted:#5d5866;--bg:#fbf8f5;--card:#fff;--accent:#8a4a6e;--accent-d:#4a1e3a;--gold:#c9a36b;--line:#ece6e1}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-a{color:var(--accent-d)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;background:rgba(251,248,245,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
-header .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
-.logo{font-weight:700;letter-spacing:.3px;display:flex;align-items:center;gap:10px;font-size:19px;color:var(--accent-d)}.logo img{width:36px;height:36px;border-radius:50%}
-.hero-band{background:linear-gradient(160deg,#4a1e3a 0%,#6b2d52 100%)}.hero-band .hero h1{color:#fff}.hero-band .hero p{color:#f1e3ea}.hero-band .tag{background:rgba(232,201,160,.18);color:#e8c9a0}.hero-band .btn{background:#e8c9a0;color:#4a1e3a!important}.hero-band .btn.ghost{background:transparent;color:#e8c9a0!important;border-color:#e8c9a0}
-nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-size:15px}
-@media(max-width:640px){nav a:not(.btn){display:none}header .btn{padding:9px 14px;font-size:14px}}
-.btn{white-space:nowrap}
-.btn{display:inline-block;background:var(--accent-d);color:#fff!important;text-decoration:none;padding:12px 22px;border-radius:999px;font-weight:600;font-size:16px}
-.btn.ghost{background:transparent;color:var(--accent-d)!important;border:2px solid var(--accent-d)}
-.hero{padding:72px 20px 56px}
-.hero h1{font-size:clamp(32px,5.5vw,54px);line-height:1.1;margin:0 0 18px;max-width:820px}
-.hero p{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:680px;margin:0 0 28px}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap}
-section{padding:56px 0;border-top:1px solid var(--line)}
-h2{font-size:clamp(26px,3.6vw,36px);margin:0 0 12px}
-.sub{color:var(--muted);max-width:700px;margin:0 0 32px}
-.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
-.card h3{margin:0 0 8px;font-size:19px}
-.card p,.card li{color:var(--muted);font-size:16px}
-.steps{counter-reset:s;list-style:none;padding:0;margin:0}
-.steps li{counter-increment:s;position:relative;padding:0 0 22px 56px}
-.steps li:before{content:counter(s);position:absolute;left:0;top:0;width:38px;height:38px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:700}
-.price{font-size:38px;font-weight:800;margin:6px 0}
-.price small{font-size:16px;color:var(--muted);font-weight:500}
-.tier.featured{border:2px solid var(--accent-d);box-shadow:0 10px 30px rgba(74,30,58,.15)}
-.tag{display:inline-block;background:#f3e4ec;color:var(--accent-d);font-size:13px;font-weight:700;padding:3px 10px;border-radius:999px}
-ul.check{padding-left:0;list-style:none}ul.check li{padding-left:26px;position:relative;margin:6px 0}
-ul.check li:before{content:"✓";position:absolute;left:0;color:var(--accent-d);font-weight:700}
-.pilot{background:linear-gradient(135deg,#f5e8ef,#fff);border:1px solid #e3cbd8;border-radius:20px;padding:32px}
-.phones{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:560px}
-.phone{aspect-ratio:9/16;border-radius:22px;background:repeating-linear-gradient(45deg,#efe7e2,#efe7e2 10px,#f7f1ed 10px,#f7f1ed 20px);border:2px dashed #cdbfb7;display:grid;place-items:center;text-align:center;font-size:13px;color:var(--muted);padding:8px}
-details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
-summary{cursor:pointer;font-weight:600}
-details p{color:var(--muted);margin:10px 0 0}
-.ph{background:#fff3cd;border:1px dashed #d4a72c;padding:0 4px;border-radius:4px;font-size:.95em}
-footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
-.tier{display:flex;flex-direction:column}.tier .tag{align-self:flex-start}.tier ul.check{flex:1}.tier .btn{text-align:center;margin-top:8px}
-.fine{font-size:14px;color:var(--muted);margin-top:16px}
-form.intake{display:grid;gap:12px;grid-template-columns:1fr 1fr;max-width:720px;margin:6px 0 4px}
-form.intake label{display:flex;flex-direction:column;gap:4px;font-size:14px;font-weight:600;color:var(--ink)}
+@font-face{font-family:"VC Serif Fallback";src:local("Times New Roman"),local("Liberation Serif"),local("DejaVu Serif");size-adjust:92%;ascent-override:96%;descent-override:26%}
+@font-face{font-family:"VC Sans Fallback";src:local("Arial"),local("Liberation Sans"),local("Helvetica");size-adjust:101%}
+:root{
+  --p950:#1A0A15;--p900:#24101E;--p800:#3A1630;--plum:#4A1E3A;--p500:#6B2D52;
+  --cream:#FBF8F5;--sand:#F4ECE4;--champ:#E8C9AE;--ink:#1D1B20;--muted:#5F5664;--line:#E7DDD4;
+  --on-dark:#FBF4F7;--on-dark-2:#DCCAD4;
+  --serif:"Instrument Serif","VC Serif Fallback",Georgia,serif;
+  --sans:"Hanken Grotesk","VC Sans Fallback",Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --gutter:clamp(16px,4vw,40px);
+  --sec:clamp(88px,11vw,140px);
+  --hdr:76px;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font:400 18px/1.6 var(--sans);color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+img,video,svg{display:block;max-width:100%}
+a{color:var(--plum);text-underline-offset:3px}
+p{margin:0 0 1em}
+ul,ol{margin:0;padding:0;list-style:none}
+[id]{scroll-margin-top:84px}
+:focus-visible{outline:3px solid var(--p500);outline-offset:3px;border-radius:6px}
+.dark :focus-visible,.site-header :focus-visible,.site-footer :focus-visible,.mbar :focus-visible,.hero :focus-visible,.panel :focus-visible,.card-dark :focus-visible,.tier-feat :focus-visible{outline-color:var(--champ)}
+.form-card :focus-visible{outline-color:var(--p500)}
+.cta-tile :focus-visible{outline-color:var(--p950)}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--champ);color:var(--p950);padding:12px 18px;border-radius:999px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+.ico{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{max-width:calc(1200px + 2 * var(--gutter));margin:0 auto;padding:0 var(--gutter)}
+section{padding:var(--sec) 0}
+#start{padding-top:calc(var(--sec) * .45)}
+.dark{background:var(--p900);color:var(--on-dark)}
+.sand{background:var(--sand)}
+
+/* type */
+h1,h2,h3{margin:0;font-weight:400}
+h1{font:400 clamp(48px,6.4vw,92px)/.98 var(--serif);letter-spacing:-.012em}
+h1 em{font-style:italic;color:var(--champ)}
+h2{font:400 clamp(40px,5vw,68px)/1.02 var(--serif);letter-spacing:-.01em;margin:0 0 22px;text-wrap:balance}
+h2 em{font-style:italic;color:var(--p500)}
+.dark h2 em,.panel h2 em{color:var(--champ)}
+h3{font:600 20px/1.3 var(--sans);margin:0 0 10px}
+.kicker{display:inline-flex;align-items:center;gap:12px;margin:0 0 22px;font:600 13px/1.2 var(--sans);text-transform:uppercase;letter-spacing:.16em;color:var(--p500)}
+.kicker::before{content:"";width:28px;height:1px;background:currentColor;opacity:.7}
+.dark .kicker,.panel .kicker{color:var(--champ)}
+.lead{font-size:19px;line-height:1.6;color:var(--muted);max-width:660px;margin:0 0 48px}
+.dark .lead{color:var(--on-dark-2)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;border:1.5px solid transparent;font:600 16px/1.1 var(--sans);text-decoration:none;cursor:pointer;white-space:nowrap;transition:background-color .25s,color .25s,border-color .25s,box-shadow .25s}
+.btn .ico{width:20px;height:20px}
+.btn-plum{background:var(--plum);color:#fff}
+.btn-plum:hover{background:var(--p500)}
+.btn-champ{background:var(--champ);color:var(--p950)}
+.btn-champ:hover{background:#F1D9C3;box-shadow:0 12px 30px -12px rgba(232,201,174,.55)}
+.btn-ghost{background:transparent;color:var(--plum);border-color:var(--plum)}
+.btn-ghost:hover{background:var(--plum);color:#fff}
+.btn-ghost-light{background:transparent;color:var(--champ);border-color:rgba(232,201,174,.7)}
+.btn-ghost-light:hover{background:rgba(232,201,174,.12);border-color:var(--champ)}
+.btn-lg{min-height:60px;padding:0 36px;font-size:17px}
+.btn-block{width:100%}
+
+/* cards */
+.card{position:relative;height:100%}
+.card-in{height:100%;background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(26px,3vw,36px);transition:box-shadow .35s var(--ease),transform .35s var(--ease)}
+.card-in:hover{box-shadow:0 26px 50px -24px rgba(74,30,58,.32)}
+.card-in p{color:var(--muted);font-size:17px;margin:0}
+.icon-dot{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--sand);color:var(--plum);margin:0 0 22px}
+
+/* header */
+.progress{display:none}
+.site-header{position:sticky;top:0;z-index:50;color:#fff;isolation:isolate}
+.site-header::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(26,10,21,.86);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid rgba(232,201,174,.12)}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;height:var(--hdr)}
+.logo{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font:400 28px/1 var(--serif);min-height:44px}
+.logo img{width:36px;height:36px;border-radius:50%}
+.nav{display:flex;align-items:center;gap:6px}
+.nav-links{display:flex;gap:2px}
+.nav-links a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;color:var(--on-dark-2);text-decoration:none;font-size:15px;font-weight:500;border-radius:999px;transition:color .2s}
+.nav-links a:hover{color:var(--champ)}
+.nav .btn{margin-left:10px;padding:0 22px;font-size:15px}
+@media (max-width:759.98px){:root{--hdr:68px}.nav-links{display:none}.nav .btn{padding:0 18px;font-size:14px;margin-left:0}.logo{font-size:25px}}
+
+/* hero */
+.hero{position:relative;margin-top:calc(-1 * var(--hdr));padding:calc(var(--hdr) + clamp(48px,7vw,96px)) 0 0;background:radial-gradient(60% 55% at 78% 34%,rgba(107,45,82,.55),rgba(36,16,30,0) 70%),radial-gradient(40% 40% at 8% 90%,rgba(232,201,174,.08),rgba(36,16,30,0) 70%),var(--p900);color:var(--on-dark);overflow:clip}
+.hero-grid{display:grid;gap:48px;align-items:center}
+@media (min-width:960px){.hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:40px}}
+.eyebrow{display:inline-block;margin:0 0 26px;padding:9px 16px;border-radius:999px;background:rgba(232,201,174,.12);border:1px solid rgba(232,201,174,.28);color:var(--champ);font:600 13px/1.35 var(--sans);text-transform:uppercase;letter-spacing:.16em}
+.hero h1{color:#fff;margin:0 0 26px;max-width:12.5em}
+.hero-sub{font-size:clamp(17px,1.6vw,19px);color:var(--on-dark-2);max-width:600px;margin:0 0 34px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.trust{display:flex;flex-wrap:wrap;gap:10px 24px;margin:30px 0 0;font-size:15px;color:var(--on-dark)}
+.trust li{display:flex;align-items:center;gap:8px}
+.trust .ico{width:18px;height:18px;color:var(--champ)}
+.hero-more{margin:22px 0 0;font-size:16px}
+.hero-more a{color:var(--champ);display:inline-flex;align-items:center;min-height:44px;gap:6px}
+.hero-phones{position:relative;width:100%;max-width:540px;margin:0 auto;aspect-ratio:540/620}
+.hp{position:absolute}
+.hp-back{left:5%;top:9%;width:41%}
+.hp-front{right:7%;top:0;width:46%}
+.hp-back .phone{transform:rotate(-7deg)}
+.hp-front .phone{transform:rotate(5deg)}
+.chip-w{position:absolute;z-index:3}
+.chip-1{left:0;top:62%}
+.chip-2{right:-1%;top:6%}
+.chip-3{left:20%;bottom:1%}
+.chip{display:flex;align-items:center;gap:10px;padding:10px 14px 10px 10px;border-radius:16px;background:rgba(251,248,245,.96);color:var(--ink);box-shadow:0 18px 40px -16px rgba(0,0,0,.55);font-size:14px;line-height:1.25;max-width:250px}
+.chip b{display:block;font-weight:600}
+.chip span{color:var(--muted);font-size:13px}
+.chip .ico{width:32px;height:32px;padding:7px;border-radius:50%;background:var(--plum);color:var(--champ);stroke-width:1.9}
+@media (max-width:559.98px){.chip{font-size:12.5px;padding:8px 11px 8px 8px;gap:8px;border-radius:13px;max-width:190px}.chip span{font-size:11.5px}.chip .ico{width:26px;height:26px;padding:5px}.chip-1{top:60%}.chip-3{left:14%}}
+.posted{margin-top:clamp(56px,7vw,96px);border-top:1px solid rgba(232,201,174,.16)}
+.posted .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;padding-top:26px;padding-bottom:26px}
+.posted-label{font:600 13px/1.2 var(--sans);text-transform:uppercase;letter-spacing:.16em;color:var(--champ)}
+.posted ul{display:flex;flex-wrap:wrap;gap:8px 28px;color:var(--on-dark);font-size:16px;font-weight:500}
+.posted li{display:flex;align-items:center;gap:10px}
+.posted li+li::before{content:"";width:4px;height:4px;border-radius:50%;background:rgba(232,201,174,.6);margin-right:18px}
+
+/* phone frame + video */
+.phone{position:relative;aspect-ratio:9/19.2;border-radius:16% / 7.5%;padding:4.2%;background:linear-gradient(160deg,#2d1426,#0c0509);box-shadow:0 0 0 1px rgba(255,255,255,.08) inset,0 40px 80px -30px rgba(0,0,0,.7),0 10px 30px -10px rgba(26,10,21,.6)}
+.screen{position:relative;height:100%;border-radius:12% / 5.6%;background:#07030a;overflow:clip;display:flex;align-items:center}
+.screen::before{content:"";position:absolute;top:2.4%;left:50%;width:30%;height:3.4%;transform:translateX(-50%);border-radius:999px;background:#000;z-index:2}
+.screen video{width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;background:#2a1422}
+.vbar{position:absolute;left:8%;right:8%;bottom:4.5%;height:3px;border-radius:3px;background:rgba(255,255,255,.22);overflow:clip;z-index:3}
+.vbar i{display:block;height:100%;background:var(--champ);transform:scaleX(0);transform-origin:0 50%}
+.play{position:absolute;inset:0;z-index:4;display:grid;place-items:center;width:100%;border:0;padding:0;background:transparent;cursor:pointer;color:var(--p950);border-radius:inherit}
+.play-dot{display:grid;place-items:center;width:clamp(56px,22%,76px);aspect-ratio:1;border-radius:50%;background:var(--champ);box-shadow:0 12px 34px -8px rgba(0,0,0,.6);transition:transform .3s var(--ease)}
+.play-dot svg{width:42%;height:42%;fill:currentColor;margin-left:8%}
+.play:hover .play-dot{background:#F1D9C3}
+.play:focus-visible{outline:3px solid var(--champ);outline-offset:-6px}
+.hint{position:absolute;top:8%;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:6px 12px 6px 9px;border-radius:999px;background:rgba(26,10,21,.72);color:#fff;font-size:13px;font-weight:600;white-space:nowrap}
+.hint .ico{width:16px;height:16px}
+.vphone.is-user .play,.vphone.is-user .vbar{display:none}
+
+/* marquee */
+.marquee{background:var(--champ);color:var(--p950);overflow:clip;padding:22px 0}
+.mq-track{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 0;width:100%}
+.mq-list{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}
+.mq-list li{display:flex;align-items:center;font:400 clamp(22px,2.4vw,30px)/1.2 var(--serif);white-space:nowrap}
+.mq-list li em{font-style:italic}
+.mq-list li::after{content:"";width:9px;height:9px;margin:0 28px;background:var(--plum);transform:rotate(45deg);opacity:.75}
+.mq-dup{display:none}
+
+/* problem */
+.big-copy{font:400 clamp(28px,3.5vw,46px)/1.24 var(--serif);color:var(--ink);max-width:28em;margin:8px 0 clamp(48px,6vw,80px);letter-spacing:-.005em}
+.grid{display:grid;gap:20px}
+@media (min-width:760px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.num{display:block;font:italic 400 44px/1 var(--serif);color:var(--p500);margin:0 0 26px}
+
+/* what you get */
+@media (min-width:640px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1080px){.grid-4{grid-template-columns:repeat(4,1fr)}}
+.card-dark .card-in{background:var(--p900);border-color:var(--p900);color:var(--on-dark)}
+.card-dark .card-in p{color:var(--on-dark-2)}
+.card-dark .icon-dot{background:rgba(232,201,174,.14);color:var(--champ)}
+
+/* how */
+.how-grid{display:grid;gap:56px}
+@media (min-width:900px){.how-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:80px}.how-left{position:sticky;top:120px;align-self:start}}
+.how-left .rule-s{width:72px;height:1px;background:var(--champ);margin:8px 0 34px}
+.how-left p{color:var(--on-dark-2);max-width:420px;margin:0 0 34px}
+.steps li{position:relative;display:grid;grid-template-columns:72px 1fr;gap:8px 20px;padding:34px 0}
+.steps li:first-child{padding-top:6px}
+.step-rule{position:absolute;left:0;right:0;bottom:0;height:1px;background:rgba(232,201,174,.22);transform-origin:0 50%}
+.steps li:last-child .step-rule{display:none}
+.step-n{font:italic 400 44px/1 var(--serif);color:var(--champ)}
+.steps h3{color:#fff;font-size:21px}
+.steps p{color:var(--on-dark-2);margin:0}
+.tag-ok{display:inline-flex;align-items:center;gap:8px;margin:14px 0 0;padding:7px 14px 7px 10px;border-radius:999px;border:1px solid rgba(232,201,174,.5);color:var(--champ);font-size:14px;font-weight:600}
+.tag-ok .ico{width:18px;height:18px}
+
+/* pricing */
+.tiers{display:grid;gap:20px;align-items:center}
+@media (min-width:900px){.tiers{grid-template-columns:repeat(3,1fr);gap:24px}}
+.tier .card-in{display:flex;flex-direction:column}
+.tier h3{font:600 15px/1.2 var(--sans);text-transform:uppercase;letter-spacing:.16em;color:var(--p500);margin:0 0 18px}
+.price{font:400 clamp(60px,6vw,76px)/1 var(--serif);color:var(--ink);margin:0;letter-spacing:-.01em}
+.price small{font:500 17px/1 var(--sans);color:var(--muted);margin-left:4px;letter-spacing:0}
+.tier .per{margin:10px 0 26px;font-size:15px;color:var(--muted)}
+.check li{position:relative;padding-left:32px;margin:0 0 12px;color:var(--muted);font-size:16.5px;line-height:1.5}
+.check li .ico{position:absolute;left:0;top:2px;width:20px;height:20px;color:var(--p500)}
+.tier .check{flex:1;margin:0 0 30px;padding-top:24px;border-top:1px solid var(--line)}
+.badge{position:absolute;top:-15px;left:50%;transform:translateX(-50%);padding:7px 16px;border-radius:999px;background:var(--champ);color:var(--p950);font:700 12px/1.2 var(--sans);text-transform:uppercase;letter-spacing:.14em;white-space:nowrap}
+.tier-feat .card-in{position:relative;background:var(--p900);border-color:var(--p900);color:var(--on-dark);box-shadow:0 30px 60px -30px rgba(36,16,30,.6)}
+@media (min-width:900px){.tier-feat .card-in{padding-top:56px;padding-bottom:56px}}
+.tier-feat h3{color:var(--champ)}
+.tier-feat .price{color:#fff}
+.tier-feat .price small,.tier-feat .per,.tier-feat .check li{color:var(--on-dark-2)}
+.tier-feat .check{border-color:rgba(232,201,174,.2)}
+.tier-feat .check li .ico{color:var(--champ)}
+.fine{font-size:15px;color:var(--muted);margin:36px 0 0;text-align:center}
+
+/* start */
+.panel{background:var(--p800);color:var(--on-dark);border-radius:32px;padding:clamp(28px,5vw,72px);display:grid;gap:40px;align-items:start;overflow:clip;background-image:radial-gradient(50% 60% at 0% 0%,rgba(232,201,174,.10),rgba(58,22,48,0) 70%)}
+@media (min-width:960px){.panel{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:64px}}
+.panel .lead{color:var(--on-dark-2);margin-bottom:28px}
+.panel .lead strong{color:#fff}
+.panel .check li{color:var(--on-dark)}
+.panel .check li .ico{color:var(--champ)}
+.or-pay{margin-top:32px;padding-top:28px;border-top:1px solid rgba(232,201,174,.2)}
+.or-pay p{margin:0 0 14px;color:var(--on-dark-2)}
+.or-pay strong{color:#fff}
+.form-card{background:var(--cream);color:var(--ink);border-radius:24px;padding:clamp(22px,3.4vw,40px);box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+form.intake{display:grid;gap:18px;grid-template-columns:1fr 1fr}
 form.intake .full{grid-column:1/-1}
-form.intake input,form.intake textarea{font-size:16px;line-height:1.4;font-family:inherit;padding:11px 12px;border:1px solid #d9cfd5;border-radius:10px;background:#fff;color:var(--ink)}
-form.intake textarea{min-height:84px;resize:vertical}
-form.intake button{border:0;cursor:pointer;justify-self:start}
-@media(max-width:640px){form.intake{grid-template-columns:1fr}}
-.or-pay{margin-top:22px;padding-top:18px;border-top:1px dashed #e3cbd8}
+form.intake label{display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:600;color:var(--ink)}
+form.intake input,form.intake textarea{width:100%;min-height:52px;font:400 16px/1.4 var(--sans);padding:13px 16px;border:1px solid #CDBFC8;border-radius:14px;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+form.intake input::placeholder,form.intake textarea::placeholder{color:#7A7080}
+form.intake textarea{min-height:120px;resize:vertical}
+form.intake input:focus,form.intake textarea:focus{outline:none;border-color:var(--plum);box-shadow:0 0 0 4px rgba(107,45,82,.45)}
+form.intake button{margin-top:4px}
+@media (max-width:599.98px){form.intake{grid-template-columns:1fr}}
+.form-note{font-size:14.5px;color:var(--muted);margin:18px 0 0}
+.success{display:flex;gap:16px;align-items:flex-start;padding:8px 0}
+.success[hidden]{display:none}
+.success .icon-dot{margin:0;background:var(--plum);color:var(--champ)}
+.success p{margin:0;font-size:18px}
+.success:focus{outline:none}
+
+/* faq */
+.faq-grid{display:grid;gap:40px}
+@media (min-width:900px){.faq-grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px}.faq-grid .faq-head{position:sticky;top:120px;align-self:start}}
+.faq details{border-bottom:1px solid #DCCFC3}
+.faq details:first-child{border-top:1px solid #DCCFC3}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:44px;padding:24px 0;cursor:pointer;list-style:none;font:600 19px/1.35 var(--sans)}
+.faq summary::-webkit-details-marker{display:none}
+.pm{position:relative;flex:none;width:36px;height:36px;border-radius:50%;border:1px solid #CDBFC8;transition:transform .35s var(--ease),background-color .25s}
+.pm::before,.pm::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.7px;background:var(--plum);transform:translate(-50%,-50%)}
+.pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq details[open] .pm{transform:rotate(45deg);background:#fff}
+.faq details p{color:var(--muted);margin:0;padding:0 56px 26px 0;font-size:17px}
+
+/* samples video section */
+.vsec{position:relative;overflow:clip;text-align:center;background:radial-gradient(50% 45% at 50% 48%,rgba(107,45,82,.62),rgba(36,16,30,0) 72%),var(--p900)}
+.vsec .lead{margin-left:auto;margin-right:auto}
+.vrow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 18px;align-items:end;max-width:1040px;margin:12px auto 0}
+.vcol{display:flex;flex-direction:column;align-items:center}
+.vcol .phone{width:100%}
+.vcol-l{grid-column:1}
+.vcol-c{grid-column:2}
+.vcol-r{grid-column:1/-1;max-width:230px;justify-self:center;width:100%}
+@media (min-width:760px){.vrow{grid-template-columns:1fr 1.18fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}.vcol-l,.vcol-c,.vcol-r{grid-column:auto;max-width:none}}
+.tilt-l{transform:rotate(-5deg)}
+.tilt-r{transform:rotate(5deg)}
+.vcap{margin-top:30px;max-width:300px;text-align:center}
+.vcap strong{display:block;font:400 24px/1.2 var(--serif);color:#fff;margin:0 0 6px}
+.vcap span{display:block;color:var(--on-dark-2);font-size:15px;line-height:1.5}
+.vcap .dur{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:4px 12px;border-radius:999px;border:1px solid rgba(232,201,174,.35);color:var(--champ);font-size:13px;font-weight:600}
+.vcap .dur .ico{width:15px;height:15px}
+.cta-tile .screen{background:var(--champ);color:var(--p950);flex-direction:column;justify-content:center;gap:24px;padding:14% 10%;text-align:center}
+.cta-tile .screen::before{background:rgba(26,10,21,.85)}
+.cta-tile p{font:400 clamp(28px,3vw,38px)/1.08 var(--serif);margin:0}
+.cta-tile p em{font-style:italic;color:var(--plum)}
+.cta-tile .btn{padding:0 18px;font-size:14.5px;gap:8px}
+.vcta{margin-top:clamp(56px,7vw,88px);display:flex;flex-direction:column;align-items:center;gap:14px}
+.vcta .alt{display:inline-flex;align-items:center;min-height:44px;color:var(--champ);font-size:16px}
+.vnote{max-width:640px;margin:28px auto 0;font-size:14.5px;color:var(--on-dark-2)}
+
+/* footer */
+.site-footer{background:var(--p950);color:var(--on-dark-2);padding:clamp(72px,9vw,120px) 0 40px;overflow:clip;font-size:15.5px}
+.wordmark{display:block;margin:0 0 clamp(40px,5vw,64px);font:400 clamp(76px,19vw,268px)/.86 var(--serif);color:var(--champ);letter-spacing:-.02em;white-space:nowrap}
+.wordmark span{display:inline-block}
+.f-grid{display:grid;gap:36px;padding-bottom:40px;border-bottom:1px solid rgba(232,201,174,.14)}
+@media (min-width:760px){.f-grid{grid-template-columns:1.4fr 1fr 1fr}}
+.f-grid h2{font:600 13px/1.2 var(--sans);text-transform:uppercase;letter-spacing:.16em;color:var(--champ);margin:0 0 14px}
+.f-desc{max-width:420px;margin:0}
+.f-desc strong{color:#fff;font-weight:600}
+.f-links li a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-dark);text-decoration:none}
+.f-links li a:hover{color:var(--champ);text-decoration:underline}
+.f-legal{padding-top:28px;font-size:14px}
+.f-legal p{margin:0 0 8px}
+.f-legal a{color:var(--on-dark);display:inline-block;padding:10px 2px}
+
+/* mobile bar */
+.mbar{display:none}
+@media (max-width:759.98px){
+  .mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:45;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(26,10,21,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid rgba(232,201,174,.16);transition:transform .3s var(--ease),visibility .3s}
+  .mbar.is-off{transform:translateY(110%);visibility:hidden}
+  .site-footer{padding-bottom:calc(40px + 84px + env(safe-area-inset-bottom))}
+}
+
+/* ===== motion (only when the user has not asked for reduced motion) ===== */
+@media (prefers-reduced-motion: no-preference){
+  html{scroll-behavior:smooth}
+  .btn{transition:transform .25s var(--ease),background-color .25s,color .25s,border-color .25s,box-shadow .25s}
+  .btn .ico{transition:transform .25s var(--ease)}
+  .btn:hover{transform:translateY(-2px)}
+  .btn:hover .arr{transform:translateX(4px)}
+  .card-in:hover{transform:translateY(-6px)}
+  .play:hover .play-dot{transform:scale(1.06)}
+
+  /* reveal on scroll */
+  .js [data-reveal]{opacity:0;transform:translateY(56px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0ms)}
+  .js [data-reveal="pop"]{transform:translateY(80px) scale(.92)}
+  .js [data-reveal="left"]{transform:translateX(56px)}
+  .js [data-reveal].is-visible{opacity:1;transform:none}
+
+  /* hero load-in */
+  [data-load]{animation:loadIn .9s var(--ease) both;animation-delay:var(--ld,0s)}
+  h1[data-load]{animation-name:loadInH1}
+  @keyframes loadInH1{from{transform:translateY(28px);filter:blur(8px)}to{transform:none;filter:blur(0)}}
+  @keyframes loadIn{from{opacity:0;transform:translateY(28px);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
+  .bob{animation:bob 3.4s ease-in-out infinite alternate}
+  .chip-2 .bob{animation-duration:3.9s;animation-delay:-1.2s}
+  .chip-3 .bob{animation-duration:3s;animation-delay:-.6s}
+  @keyframes bob{from{transform:translateY(0)}to{transform:translateY(-10px)}}
+
+  /* marquee */
+  .mq-track{flex-wrap:nowrap;justify-content:flex-start;width:max-content;animation:mq 46s linear infinite}
+  .mq-list{flex-wrap:nowrap}
+  .mq-dup{display:flex}
+  .marquee:hover .mq-track,.marquee:focus-within .mq-track{animation-play-state:paused}
+  @keyframes mq{to{transform:translateX(-50%)}}
+
+  .pm{transition:transform .35s var(--ease),background-color .25s}
+
+  /* scroll-driven extras (Chromium/Safari 26+); Firefox keeps the IntersectionObserver reveals */
+  @supports (animation-timeline: view()){
+    .progress{display:block;position:fixed;top:0;left:0;right:0;height:3px;z-index:60;background:var(--champ);transform-origin:0 50%;transform:scaleX(0);animation:grow auto linear both;animation-timeline:scroll(root)}
+    @keyframes grow{to{transform:scaleX(1)}}
+    .site-header::before{animation:fadeIn auto linear both;animation-timeline:scroll(root);animation-range:0px 240px}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .px-back{animation:up50 auto linear both;animation-timeline:scroll(root);animation-range:0px 900px}
+    .px-front{animation:up130 auto linear both;animation-timeline:scroll(root);animation-range:0px 900px}
+    .px-chip{animation:up220 auto linear both;animation-timeline:scroll(root);animation-range:0px 900px}
+    .hero-copy{animation:fade20 auto linear both;animation-timeline:scroll(root);animation-range:0px 900px}
+    @keyframes up50{to{transform:translateY(-50px)}}
+    @keyframes up130{to{transform:translateY(-130px)}}
+    @keyframes up220{to{transform:translateY(-220px)}}
+    @keyframes fade20{to{opacity:.2}}
+    .js-words{view-timeline-name:--words}
+    .js-words .w{animation:ink auto linear both;animation-timeline:--words}
+    @keyframes ink{from{color:#CDBFC6}to{color:#1D1B20}}
+    .step-rule{animation:drawX auto linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+    @keyframes drawX{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+    .tilt-l{animation:rotL auto linear both;animation-timeline:view();animation-range:entry 0% cover 45%}
+    .tilt-r{animation:rotR auto linear both;animation-timeline:view();animation-range:entry 0% cover 45%}
+    @keyframes rotL{from{transform:translateY(90px) rotate(0)}to{transform:translateY(0) rotate(-5deg)}}
+    @keyframes rotR{from{transform:translateY(90px) rotate(0)}to{transform:translateY(0) rotate(5deg)}}
+    .wordmark{view-timeline-name:--wm;animation:wmRise auto linear both;animation-timeline:view();animation-range:entry 0% entry 100%}
+    @keyframes wmRise{from{opacity:.25;transform:translateY(80px)}to{opacity:1;transform:none}}
+    .wordmark span{animation:tighten auto linear both;animation-timeline:--wm;animation-range:entry 0% entry 100%}
+    @keyframes tighten{from{transform:translateX(calc(var(--o) * .07em))}to{transform:none}}
+  }
+}
 </style>
 <link rel="icon" href="logo.png">
 <meta property="og:image" content="https://velvetclip.com/og.png">
-<meta name="theme-color" content="#4a1e3a">
+<meta property="og:title" content="VelvetClip — Done-for-you short-form video for med spas">
+<meta property="og:description" content="We plan, produce and post Reels, TikToks and Shorts for independent med spas. You approve once a week.">
+<meta property="og:url" content="https://velvetclip.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1A0A15">
 </head>
 <body>
-<header><div class="wrap">
-  <div class="logo"><img src="logo.png" alt="">VelvetClip</div>
-  <nav><a href="#how">How it works</a><a href="/samples/">Samples</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="btn" href="#start">Get 3 free samples</a></nav>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.8v14.4c0 .8.9 1.3 1.6.8l11-7.2c.6-.4.6-1.2 0-1.6l-11-7.2C7.9 3.5 7 4 7 4.8z"/></symbol>
+  <symbol id="i-play-line" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8.8v6.4l5-3.2z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><rect x="2.5" y="6" width="13.5" height="12" rx="2.5"/><path d="M16 10.3l5.5-3.1v9.6L16 13.7"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L10.2 13.8M21 3l-6.8 18-4-7.2L3 9.8z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.6c0 4.6-3.1 7.9-7.5 9.4-4.4-1.5-7.5-4.8-7.5-9.4V6z"/><path d="M8.8 12.2l2.2 2.2 4.4-4.4"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/><path d="M18.5 16.5v4M16.5 18.5h4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="site-header"><div class="wrap hdr">
+  <a class="logo" href="/" aria-label="VelvetClip home"><picture><source srcset="media/logo-96.webp" type="image/webp"><img src="logo.png" alt="" width="36" height="36"></picture>VelvetClip</a>
+  <nav class="nav" aria-label="Main"><div class="nav-links"><a href="#how">How it works</a><a href="#samples">Samples</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></div><a class="btn btn-champ" href="#start">Get 3 free samples</a></nav>
 </div></header>
 
-<main>
-<div class="hero-band"><div class="wrap hero">
-  <span class="tag">For independent med spas &amp; aesthetic clinics in the US</span>
-  <h1>Reels, TikToks and Shorts for your med spa, posted for you every week.</h1>
-  <p>We plan, produce, caption and schedule short vertical videos for your spa. You approve one batch a week. No filming days, no agency retainer lock-in, no posting at midnight.</p>
-  <div class="cta-row"><a class="btn" href="#start">Get 3 free sample videos</a><a class="btn ghost" href="#pricing">See pricing</a></div>
-  <p style="margin:18px 0 0;font-size:16px"><a href="/samples/" style="color:#e8c9a0">See example videos &rarr;</a></p>
-</div></div>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow" data-load style="--ld:.1s">For independent med spas &amp; aesthetic clinics in the US</span>
+      <h1 id="hero-title" data-load style="--ld:.18s">Reels, TikToks and Shorts for your med spa, <em>posted for you every week.</em></h1>
+      <p class="hero-sub" data-load style="--ld:.3s">We plan, produce, caption and schedule short vertical videos for your spa. You approve one batch a week. No filming days, no agency retainer lock-in, no posting at midnight.</p>
+      <div class="cta-row" data-load style="--ld:.42s"><a class="btn btn-champ" href="#start">Get 3 free sample videos <svg class="ico arr" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost-light" href="#samples"><svg class="ico" aria-hidden="true"><use href="#i-play-line"/></svg> Watch example videos</a></div>
+      <ul class="trust" data-load style="--ld:.52s" aria-label="The basics">
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>No card for samples</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Month-to-month</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>You keep every video</li>
+      </ul>
+      <p class="hero-more" data-load style="--ld:.58s"><a href="/samples/">See example videos &rarr;</a></p>
+    </div>
+    <div class="hero-phones" aria-hidden="true">
+      <div class="hp hp-back px-back"><div data-load style="--ld:.6s"><div class="phone"><div class="screen">
+        <video muted loop playsinline preload="none" poster="media/hero-first-visit.webp" width="360" height="640" data-lazy tabindex="-1"><source data-src="media/hero-first-visit.mp4" type="video/mp4"></video>
+      </div></div></div></div>
+      <div class="hp hp-front px-front"><div data-load style="--ld:.68s"><div class="phone"><div class="screen">
+        <video muted loop playsinline preload="none" poster="media/hero-fall-glow.webp" width="360" height="640" data-lazy tabindex="-1"><source data-src="media/hero-fall-glow.mp4" type="video/mp4"></video>
+      </div></div></div></div>
+      <div class="chip-w chip-1 px-chip"><div data-load style="--ld:.74s"><div class="bob"><div class="chip"><svg class="ico"><use href="#i-check"/></svg><b>Approved by you</b></div></div></div></div>
+      <div class="chip-w chip-2 px-chip"><div data-load style="--ld:.8s"><div class="bob"><div class="chip"><svg class="ico"><use href="#i-cal"/></svg><div><b>Scheduled</b><span>TikTok · Tue 11:30 AM</span></div></div></div></div></div>
+      <div class="chip-w chip-3 px-chip"><div data-load style="--ld:.86s"><div class="bob"><div class="chip"><svg class="ico"><use href="#i-spark"/></svg><div><b>Edited for you</b><span>Captions, B-roll &amp; music</span></div></div></div></div></div>
+    </div>
+  </div>
+  <div class="posted"><div class="wrap">
+    <span class="posted-label" id="posted-label">Posted to</span>
+    <ul aria-labelledby="posted-label"><li>Instagram Reels</li><li>TikTok</li><li>YouTube Shorts</li><li>Facebook Reels</li></ul>
+  </div></div>
+</section>
 
-<section id="problem"><div class="wrap">
-  <h2>Your patients are scrolling. Is your spa showing up?</h2>
-  <p class="sub">Most med spa owners know short-form video works. The problem is time: you're injecting all day, and "we should post more" slides to next week.</p>
-  <div class="grid">
-    <div class="card"><h3>No time to film or edit</h3><p>Producing even 3 good videos a week takes hours of editing, captions and scheduling.</p></div>
-    <div class="card"><h3>Instagram only</h3><p>Many spas post on Instagram but never repurpose to TikTok, YouTube Shorts or Facebook Reels, so they miss out on reach.</p></div>
-    <div class="card"><h3>Inconsistent posting</h3><p>A busy month means no posts. Consistency is what keeps you top of mind when a patient is ready to book.</p></div>
+<div class="marquee">
+  <div class="mq-track">
+    <ul class="mq-list" aria-label="Services we make videos for"><li>Neurotoxins</li><li><em>Dermal filler</em></li><li>HydraFacial</li><li><em>Laser hair removal</em></li><li>Microneedling</li><li><em>Chemical peels</em></li><li>Body contouring</li><li><em>IV therapy</em></li><li>Brows &amp; lashes</li><li><em>Seasonal promos</em></li></ul>
+    <ul class="mq-list mq-dup" aria-hidden="true"><li>Neurotoxins</li><li><em>Dermal filler</em></li><li>HydraFacial</li><li><em>Laser hair removal</em></li><li>Microneedling</li><li><em>Chemical peels</em></li><li>Body contouring</li><li><em>IV therapy</em></li><li>Brows &amp; lashes</li><li><em>Seasonal promos</em></li></ul>
+  </div>
+</div>
+
+<section id="problem" aria-labelledby="problem-title"><div class="wrap">
+  <p class="kicker" data-reveal>Sound familiar?</p>
+  <h2 id="problem-title" data-reveal style="--d:80ms">Your patients are scrolling. <em>Is your spa showing up?</em></h2>
+  <p class="big-copy js-words">Most med spa owners know short-form video works. The problem is time: you're injecting all day, and "we should post more" slides to next week.</p>
+  <div class="grid grid-3">
+    <div class="card" data-reveal="pop"><div class="card-in"><span class="num" aria-hidden="true">01</span><h3>No time to film or edit</h3><p>Producing even 3 good videos a week takes hours of editing, captions and scheduling.</p></div></div>
+    <div class="card" data-reveal="pop" style="--d:80ms"><div class="card-in"><span class="num" aria-hidden="true">02</span><h3>Instagram only</h3><p>Many spas post on Instagram but never repurpose to TikTok, YouTube Shorts or Facebook Reels, so they miss out on reach.</p></div></div>
+    <div class="card" data-reveal="pop" style="--d:160ms"><div class="card-in"><span class="num" aria-hidden="true">03</span><h3>Inconsistent posting</h3><p>A busy month means no posts. Consistency is what keeps you top of mind when a patient is ready to book.</p></div></div>
   </div>
 </div></section>
 
-<section id="what"><div class="wrap">
-  <h2>What you get</h2>
-  <p class="sub">A complete short-form system run for you: strategy, production and posting.</p>
-  <div class="grid">
-    <div class="card"><h3>📅 Monthly content plan</h3><p>Hooks and topics built around your services, seasonal promos and events.</p></div>
-    <div class="card"><h3>🎬 Produced videos</h3><p>Your phone clips edited together with polished AI-assisted B-roll, on-screen captions and music.</p></div>
-    <div class="card"><h3>📲 Posted everywhere</h3><p>Scheduled to Instagram Reels, TikTok, Facebook Reels and YouTube Shorts at good local times.</p></div>
-    <div class="card"><h3>📈 Monthly report</h3><p>Views, followers, profile visits and link clicks, plus what we'll do next month.</p></div>
+<section id="what" class="sand" aria-labelledby="what-title"><div class="wrap">
+  <p class="kicker" data-reveal>What you get</p>
+  <h2 id="what-title" data-reveal style="--d:80ms">A complete short-form system <em>run for you.</em></h2>
+  <p class="lead" data-reveal style="--d:160ms">Strategy, production and posting.</p>
+  <div class="grid grid-4">
+    <div class="card card-dark" data-reveal="pop"><div class="card-in"><span class="icon-dot"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg></span><h3>Monthly content plan</h3><p>Hooks and topics built around your services, seasonal promos and events.</p></div></div>
+    <div class="card" data-reveal="pop" style="--d:80ms"><div class="card-in"><span class="icon-dot"><svg class="ico" aria-hidden="true"><use href="#i-cam"/></svg></span><h3>Produced videos</h3><p>Your phone clips edited together with polished AI-assisted B-roll, on-screen captions and music.</p></div></div>
+    <div class="card" data-reveal="pop" style="--d:160ms"><div class="card-in"><span class="icon-dot"><svg class="ico" aria-hidden="true"><use href="#i-send"/></svg></span><h3>Posted everywhere</h3><p>Scheduled to Instagram Reels, TikTok, Facebook Reels and YouTube Shorts at good local times.</p></div></div>
+    <div class="card" data-reveal="pop" style="--d:240ms"><div class="card-in"><span class="icon-dot"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg></span><h3>Monthly report</h3><p>Views, followers, profile visits and link clicks, plus what we'll do next month.</p></div></div>
   </div>
 </div></section>
 
-<section id="how"><div class="wrap">
-  <h2>How it works</h2>
+<section id="how" class="dark" aria-labelledby="how-title"><div class="wrap how-grid">
+  <div class="how-left">
+    <p class="kicker" data-reveal>How it works</p>
+    <h2 id="how-title" data-reveal style="--d:80ms">Five steps. <em>One approval a week.</em></h2>
+    <div class="rule-s" aria-hidden="true"></div>
+    <div data-reveal style="--d:160ms"><a class="btn btn-champ" href="#start">Get 3 free sample videos <svg class="ico arr" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+  </div>
   <ol class="steps">
-    <li><strong>30-minute kickoff call.</strong> We learn your services, brand, promos and any claims you want us to avoid.</li>
-    <li><strong>Connect your accounts.</strong> You connect your own accounts to our scheduler. We never ask for your passwords.</li>
-    <li><strong>We plan &amp; produce.</strong> Send quick phone clips from our weekly shot list (optional). We handle editing, B-roll, captions and music.</li>
-    <li><strong>You approve once a week.</strong> One link, the whole week's videos. Approve or leave comments.</li>
-    <li><strong>We post &amp; report.</strong> Videos go out on schedule. Every month you get a clear report and next month's plan.</li>
+    <li data-reveal="left"><span class="step-n" aria-hidden="true">01</span><div><h3>30-minute kickoff call.</h3><p>We learn your services, brand, promos and any claims you want us to avoid.</p></div><span class="step-rule" aria-hidden="true"></span></li>
+    <li data-reveal="left" style="--d:80ms"><span class="step-n" aria-hidden="true">02</span><div><h3>Connect your accounts.</h3><p>You connect your own accounts to our scheduler. We never ask for your passwords.</p></div><span class="step-rule" aria-hidden="true"></span></li>
+    <li data-reveal="left" style="--d:160ms"><span class="step-n" aria-hidden="true">03</span><div><h3>We plan &amp; produce.</h3><p>Send quick phone clips from our weekly shot list (optional). We handle editing, B-roll, captions and music.</p></div><span class="step-rule" aria-hidden="true"></span></li>
+    <li data-reveal="left" style="--d:240ms"><span class="step-n" aria-hidden="true">04</span><div><h3>You approve once a week.</h3><p>One link, the whole week's videos. Approve or leave comments.</p><span class="tag-ok"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg>Nothing posts without your OK</span></div><span class="step-rule" aria-hidden="true"></span></li>
+    <li data-reveal="left"><span class="step-n" aria-hidden="true">05</span><div><h3>We post &amp; report.</h3><p>Videos go out on schedule. Every month you get a clear report and next month's plan.</p></div><span class="step-rule" aria-hidden="true"></span></li>
   </ol>
 </div></section>
 
-<section id="pricing"><div class="wrap">
-  <h2>Simple monthly pricing</h2>
-  <p class="sub">USD, billed monthly. Month-to-month, cancel with 30 days' notice. You keep every video we make.</p>
-  <div class="grid">
-    <div class="card tier"><h3>Starter</h3><div class="price">$597<small>/mo</small></div>
-      <ul class="check"><li>12 short videos / month</li><li>Instagram Reels + TikTok</li><li>Content plan, captions, hashtags</li><li>Monthly written report</li></ul>
-      <a class="btn ghost" href="https://buy.stripe.com/14A5kC4K43Cq6U0a6T3sI00" data-goatcounter-click="stripe-starter">Start Starter</a></div>
-    <div class="card tier featured"><span class="tag">Most popular</span><h3>Growth</h3><div class="price">$897<small>/mo</small></div>
-      <ul class="check"><li>20 short videos / month</li><li>IG, TikTok, FB Reels, YouTube Shorts</li><li>1 promo/event mini-campaign</li><li>2 ad-ready cuts</li><li>Monthly report + 20-min call</li></ul>
-      <a class="btn" href="https://buy.stripe.com/bJe9ASa4o4Guemsa6T3sI02" data-goatcounter-click="stripe-growth">Start Growth</a></div>
-    <div class="card tier"><h3>Pro</h3><div class="price">$1,297<small>/mo</small></div>
-      <ul class="check"><li>30 short videos / month</li><li>All 4 platforms + 2nd location account</li><li>2 promo mini-campaigns</li><li>4 ad-ready cuts</li><li>Monthly report + 30-min call</li></ul>
-      <a class="btn ghost" href="https://buy.stripe.com/4gM5kCccwa0Odio5QD3sI03" data-goatcounter-click="stripe-pro">Start Pro</a></div>
+<section id="pricing" aria-labelledby="pricing-title"><div class="wrap">
+  <p class="kicker" data-reveal>Pricing</p>
+  <h2 id="pricing-title" data-reveal style="--d:80ms">Simple <em>monthly pricing</em></h2>
+  <p class="lead" data-reveal style="--d:160ms">USD, billed monthly. Month-to-month, cancel with 30 days' notice. You keep every video we make.</p>
+  <div class="tiers">
+    <div class="card tier" data-reveal="pop"><div class="card-in"><h3>Starter</h3><div class="price">$597<small>/mo</small></div><p class="per">About $50 per video</p>
+      <ul class="check"><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>12 short videos / month</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Instagram Reels + TikTok</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Content plan, captions, hashtags</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Monthly written report</li></ul>
+      <a class="btn btn-ghost btn-block" href="https://buy.stripe.com/bJe14mgsM0qe0vC1An3sI01" data-goatcounter-click="stripe-starter">Start Starter <svg class="ico arr" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div>
+    <div class="card tier tier-feat" data-reveal="pop" style="--d:80ms"><div class="card-in"><span class="badge">Most popular</span><h3>Growth</h3><div class="price">$897<small>/mo</small></div><p class="per">About $45 per video</p>
+      <ul class="check"><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>20 short videos / month</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>IG, TikTok, FB Reels, YouTube Shorts</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>1 promo/event mini-campaign</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>2 ad-ready cuts</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Monthly report + 20-min call</li></ul>
+      <a class="btn btn-champ btn-block" href="https://buy.stripe.com/bJe9ASa4o4Guemsa6T3sI02" data-goatcounter-click="stripe-growth">Start Growth <svg class="ico arr" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div>
+    <div class="card tier" data-reveal="pop" style="--d:160ms"><div class="card-in"><h3>Pro</h3><div class="price">$1,297<small>/mo</small></div><p class="per">About $43 per video</p>
+      <ul class="check"><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>30 short videos / month</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>All 4 platforms + 2nd location account</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>2 promo mini-campaigns</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>4 ad-ready cuts</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Monthly report + 30-min call</li></ul>
+      <a class="btn btn-ghost btn-block" href="https://buy.stripe.com/4gM5kCccwa0Odio5QD3sI03" data-goatcounter-click="stripe-pro">Start Pro <svg class="ico arr" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div>
   </div>
   <p class="fine">Secure checkout by Stripe. Not sure yet? <a href="#start">Get 3 free sample videos</a> first. By subscribing you agree to our <a href="/terms/">Terms</a>.</p>
 </div></section>
 
-<section id="start"><div class="wrap">
-  <div class="pilot">
-    <h2>Try it first: 3 free sample videos</h2>
-    <p class="sub" style="margin-bottom:18px">We'll make 3 short videos for your spa, with your name, services and style. No card, no call required. If you like them, you can start with a <strong>$297 pilot month</strong> (one-time payment, no auto-renewal). If not, keep the videos.</p>
-    <form class="intake" id="intake" action="https://formspree.io/f/xnpjnqak" method="POST" data-goatcounter-click="intake-submit">
-      <label>Your name<input name="name" autocomplete="name" required></label>
-      <label>Spa name<input name="spa_name" autocomplete="organization" required></label>
-      <label>Email<input name="email" type="email" autocomplete="email" required></label>
-      <label>City, state<input name="city" placeholder="e.g. Austin, TX"></label>
-      <label class="full">Website or Instagram<input name="website" placeholder="yourspa.com or @yourspa"></label>
-      <label class="full">Services to feature (optional)<textarea name="message" placeholder="e.g. Botox, HydraFacial, a fall promo"></textarea></label>
-      <input type="hidden" name="_subject" value="New VelvetClip sample request">
-      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-      <button class="btn full" type="submit">Request my 3 free samples</button>
-    </form>
-    <p class="fine" id="intake-note">Prefer email? Write to <a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a>. We use your details only to make and send your samples (<a href="/privacy/">Privacy</a>).</p>
-    <div class="or-pay">
-      <p style="margin:0 0 10px"><strong>Already seen our samples?</strong> Start the pilot month now.</p>
-      <a class="btn ghost" href="https://buy.stripe.com/bJe00i5O8dd0fqwgvh3sI04" data-goatcounter-click="stripe-pilot">Start the $297 pilot</a>
+<section id="start" aria-labelledby="start-title"><div class="wrap">
+  <div class="panel" data-reveal>
+    <div>
+      <p class="kicker">Free samples</p>
+      <h2 id="start-title">Try it first: <em>3 free sample videos</em></h2>
+      <p class="lead">We'll make 3 short videos for your spa, with your name, services and style. No card, no call required. If you like them, you can start with a <strong>$297 pilot month</strong> (one-time payment, no auto-renewal). If not, keep the videos.</p>
+      <ul class="check">
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Your name, services and style</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>No card, no call required</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Keep the videos either way</li>
+      </ul>
+      <div class="or-pay">
+        <p><strong>Already seen our samples?</strong> Start the pilot month now.</p>
+        <a class="btn btn-ghost-light" href="https://buy.stripe.com/bJe00i5O8dd0fqwgvh3sI04" data-goatcounter-click="stripe-pilot">Start the $297 pilot <svg class="ico arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <div class="form-card">
+      <form class="intake" id="intake" action="https://formspree.io/f/xnpjnqak" method="POST" data-goatcounter-click="intake-submit">
+        <label>Your name<input name="name" autocomplete="name" required></label>
+        <label>Spa name<input name="spa_name" autocomplete="organization" required></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+        <label>City, state<input name="city" placeholder="e.g. Austin, TX"></label>
+        <label class="full">Website or Instagram<input name="website" placeholder="yourspa.com or @yourspa"></label>
+        <label class="full">Services to feature (optional)<textarea name="message" placeholder="e.g. Botox, HydraFacial, a fall promo"></textarea></label>
+        <input type="hidden" name="_subject" value="New VelvetClip sample request">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <button class="btn btn-plum btn-block full" type="submit">Request my 3 free samples <svg class="ico arr" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </form>
+      <div class="success" id="intake-success" tabindex="-1" hidden><span class="icon-dot"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><p><strong>Thanks! We'll reply within 1 business day.</strong></p></div>
+      <p class="form-note" id="intake-note" aria-live="polite">Prefer email? Write to <a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a>. We use your details only to make and send your samples (<a href="/privacy/">Privacy</a>).</p>
     </div>
   </div>
 </div></section>
 <script>
-(function(){var f=document.getElementById('intake'),n=document.getElementById('intake-note');if(!f||!window.fetch)return;f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button[type=submit]');b.disabled=true;fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){if(!r.ok)throw 0;f.reset();f.style.display='none';n.innerHTML='<strong>Thanks! We\'ll reply within 1 business day.</strong>';}).catch(function(){b.disabled=false;n.innerHTML='<strong>Sorry, something went wrong sending your request.</strong> Please email <a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a> instead.';});});})();
+(function(){var f=document.getElementById('intake'),n=document.getElementById('intake-note'),ok=document.getElementById('intake-success');if(!f||!window.fetch)return;f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button[type=submit]');b.disabled=true;fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){if(!r.ok)throw 0;f.reset();f.style.display='none';n.innerHTML='<strong>Thanks! We\'ll reply within 1 business day.</strong>';n.hidden=true;if(ok){ok.hidden=false;ok.focus();}}).catch(function(){b.disabled=false;n.innerHTML='<strong>Sorry, something went wrong sending your request.</strong> Please email <a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a> instead.';});});})();
 </script>
 
-<section id="faq"><div class="wrap">
-  <h2>FAQ</h2>
-  <details><summary>Do I have to be on camera?</summary><p>No. Talking-to-camera clips help, but we can build videos from footage of your space, products and team plus B-roll. You choose.</p></details>
-  <details><summary>Do you use AI? Will it look fake?</summary><p>We use AI tools to speed up editing and create ambient B-roll (spa scenes, textures, product-style shots). We never use AI to create fake patients, fake results or fake reviews. Realistic AI footage is labeled as the platforms require.</p></details>
-  <details><summary>What about before/after photos and medical claims?</summary><p>We only use before/after content you provide with signed patient consent, and you approve every video before it posts. You set the claims and wording your practice is comfortable with.</p></details>
-  <details><summary>Do you guarantee bookings or followers?</summary><p>No, and be wary of anyone who does. We guarantee delivery: if we miss an agreed posting week, that week is free.</p></details>
-  <details><summary>Where are you based? What hours do you work?</summary><p>We work remotely and cover US business hours for approvals and messages. Replies within one US business day.</p></details>
-  <details><summary>Is there a contract?</summary><p>A simple month-to-month service agreement. Cancel with 30 days' notice.</p></details>
+<section id="faq" class="sand" aria-labelledby="faq-title"><div class="wrap faq-grid">
+  <div class="faq-head">
+    <p class="kicker" data-reveal>FAQ</p>
+    <h2 id="faq-title" data-reveal style="--d:80ms">Questions, <em>answered.</em></h2>
+  </div>
+  <div class="faq" data-reveal style="--d:120ms">
+    <details><summary>Do I have to be on camera?<span class="pm" aria-hidden="true"></span></summary><p>No. Talking-to-camera clips help, but we can build videos from footage of your space, products and team plus B-roll. You choose.</p></details>
+    <details><summary>Do you use AI? Will it look fake?<span class="pm" aria-hidden="true"></span></summary><p>We use AI tools to speed up editing and create ambient B-roll (spa scenes, textures, product-style shots). We never use AI to create fake patients, fake results or fake reviews. Realistic AI footage is labeled as the platforms require.</p></details>
+    <details><summary>What about before/after photos and medical claims?<span class="pm" aria-hidden="true"></span></summary><p>We only use before/after content you provide with signed patient consent, and you approve every video before it posts. You set the claims and wording your practice is comfortable with.</p></details>
+    <details><summary>Do you guarantee bookings or followers?<span class="pm" aria-hidden="true"></span></summary><p>No, and be wary of anyone who does. We guarantee delivery: if we miss an agreed posting week, that week is free.</p></details>
+    <details><summary>Where are you based? What hours do you work?<span class="pm" aria-hidden="true"></span></summary><p>We work remotely and cover US business hours for approvals and messages. Replies within one US business day.</p></details>
+    <details><summary>Is there a contract?<span class="pm" aria-hidden="true"></span></summary><p>A simple month-to-month service agreement. Cancel with 30 days' notice.</p></details>
+  </div>
+</div></section>
+
+<section id="samples" class="dark vsec" aria-labelledby="samples-title"><div class="wrap">
+  <p class="kicker" data-reveal>Example videos</p>
+  <h2 id="samples-title" data-reveal style="--d:80ms">Watch what we make. <em>Then get three for your spa.</em></h2>
+  <p class="lead" data-reveal style="--d:160ms">Two short vertical videos in the style we make for med spas, ready for Instagram Reels, TikTok and YouTube Shorts. Tap a video to play it with sound.</p>
+  <div class="vrow">
+    <figure class="vcol vcol-l" data-reveal="pop" style="margin:0">
+      <p class="sr-only" id="tx-first-visit">Music only, no voiceover. On-screen text: AI-generated visuals. First visit? Here's what to expect. 4 simple steps. Step 1, Consult: Share your goals and ask every question you have. Step 2, Plan: Your provider walks you through options and costs. Step 3, Treatment: Your provider explains each step as you go. Step 4, Aftercare: Go home with simple aftercare tips and a number to call. Book a consult at Your Med Spa, Your City. Book your consult today. Results vary. Consult a licensed provider.</p>
+      <div class="phone vphone tilt-l"><div class="screen">
+        <video muted loop playsinline preload="none" poster="/samples/sample2-first-visit.jpg" width="720" height="1280" data-lazy aria-label="Example video: “Your first visit” walkthrough" aria-describedby="tx-first-visit"><source data-src="/samples/sample2-first-visit.mp4" type="video/mp4">Your browser can't play this video. <a href="/samples/sample2-first-visit.mp4">Download it</a>.</video>
+        <button class="play" type="button" aria-label="Play “Your first visit” walkthrough from the start, with sound"><span class="play-dot"><svg aria-hidden="true"><use href="#i-play"/></svg></span><span class="hint" aria-hidden="true"><svg class="ico"><use href="#i-mute"/></svg>Tap for sound</span></button>
+        <span class="vbar" aria-hidden="true"><i></i></span>
+      </div></div>
+      <figcaption class="vcap"><strong>"Your first visit" walkthrough</strong><span>A calm, step-by-step video that answers what new clients wonder before booking.</span><span class="dur"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>26 sec</span></figcaption>
+    </figure>
+    <figure class="vcol vcol-c" data-reveal="pop" style="margin:0;--d:80ms">
+      <p class="sr-only" id="tx-fall-glow">Music only, no voiceover. On-screen text: AI-generated visuals. This fall: Your fall glow-up starts here. Fall favorite, Facials: A seasonal refresh for your skincare routine. Chemical Peels: Tailored to your skin and your goals. Skincare Consults: Build a fall routine with a pro. Ask about this month's specials. Details and availability at the spa. Book a consult at Your Med Spa, Your City. Book your consult today. Results vary. Consult a licensed provider. Offer details at the spa.</p>
+      <div class="phone vphone"><div class="screen">
+        <video muted loop playsinline preload="none" poster="/samples/sample3-fall-glow.jpg" width="720" height="1280" data-lazy aria-label="Example video: Seasonal promo “Fall glow”" aria-describedby="tx-fall-glow"><source data-src="/samples/sample3-fall-glow.mp4" type="video/mp4">Your browser can't play this video. <a href="/samples/sample3-fall-glow.mp4">Download it</a>.</video>
+        <button class="play" type="button" aria-label="Play seasonal promo “Fall glow” from the start, with sound"><span class="play-dot"><svg aria-hidden="true"><use href="#i-play"/></svg></span><span class="hint" aria-hidden="true"><svg class="ico"><use href="#i-mute"/></svg>Tap for sound</span></button>
+        <span class="vbar" aria-hidden="true"><i></i></span>
+      </div></div>
+      <figcaption class="vcap"><strong>Seasonal promo: "Fall glow"</strong><span>A short promo built around your services and this month's offer.</span><span class="dur"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>26 sec</span></figcaption>
+    </figure>
+    <div class="vcol vcol-r" data-reveal="pop" style="--d:160ms">
+      <div class="phone cta-tile tilt-r"><div class="screen">
+        <p>This one has <em>your name</em> on it.</p>
+        <a class="btn btn-plum" href="#start">Get 3 free samples <svg class="ico arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div></div>
+      <div class="vcap"><strong>Your spa, next</strong><span>Three sample videos with your name, services and style.</span><span class="dur">Free · No card</span></div>
+    </div>
+  </div>
+  <div class="vcta" data-reveal>
+    <a class="btn btn-champ btn-lg" href="#start">Get 3 free sample videos <svg class="ico arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a class="alt" href="/samples/">Open the example videos page &rarr;</a>
+  </div>
+  <p class="vnote">These are examples, not client work. They use AI-generated B-roll and placeholder details ("Your Med Spa", "Your City"). No real patients, treatments or results are shown.</p>
 </div></section>
 </main>
 
-<footer><div class="wrap">
-  <p>© 2026 VelvetClip · <a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
-  <p>Independent service. Not affiliated with Instagram, TikTok, YouTube, Facebook or Runway. We do not provide medical advice.</p>
+<footer class="site-footer"><div class="wrap">
+  <p class="wordmark"><span class="sr-only">VelvetClip</span><span aria-hidden="true" style="--o:-4.5">V</span><span aria-hidden="true" style="--o:-3.5">e</span><span aria-hidden="true" style="--o:-2.5">l</span><span aria-hidden="true" style="--o:-1.5">v</span><span aria-hidden="true" style="--o:-.5">e</span><span aria-hidden="true" style="--o:.5">t</span><span aria-hidden="true" style="--o:1.5">C</span><span aria-hidden="true" style="--o:2.5">l</span><span aria-hidden="true" style="--o:3.5">i</span><span aria-hidden="true" style="--o:4.5">p</span></p>
+  <div class="f-grid">
+    <div><p class="f-desc"><strong>Done-for-you short-form video for med spas.</strong> We plan, produce and post Reels, TikToks and Shorts for independent med spas. You approve once a week.</p></div>
+    <nav aria-labelledby="f-site"><h2 id="f-site">Site</h2><ul class="f-links"><li><a href="#how">How it works</a></li><li><a href="#samples">Samples</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li><li><a href="#start">Get 3 free samples</a></li></ul></nav>
+    <div><h2 id="f-contact">Contact</h2><ul class="f-links" aria-labelledby="f-contact"><li><a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a></li><li><a href="/samples/">Example videos</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li></ul></div>
+  </div>
+  <div class="f-legal">
+    <p>© 2026 VelvetClip · <a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+    <p>Independent service. Not affiliated with Instagram, TikTok, YouTube, Facebook or Runway. We do not provide medical advice.</p>
+  </div>
 </div></footer>
+
+<div class="mbar" id="mbar"><a class="btn btn-champ btn-block" href="#start">Get 3 free sample videos <svg class="ico arr" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+
+<script>
+(function(){
+  var d=document,w=window,reduce=w.matchMedia&&w.matchMedia('(prefers-reduced-motion: reduce)').matches,hasIO='IntersectionObserver' in w;
+  function each(s,f){Array.prototype.forEach.call(d.querySelectorAll(s),f)}
+  /* 1. reveal on scroll: one observer, adds .is-visible once */
+  if(!hasIO||reduce){each('[data-reveal]',function(e){e.classList.add('is-visible')})}
+  else{var rio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');rio.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -10% 0px'});each('[data-reveal]',function(e){rio.observe(e)})}
+  /* 2. word-by-word reveal (scroll-timeline browsers only), split just before it scrolls into view */
+  var wp=d.querySelector('.js-words');
+  if(wp&&hasIO&&!reduce&&w.CSS&&CSS.supports&&CSS.supports('animation-timeline: view()')){
+    var wio=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;wio.disconnect();
+      var words=wp.textContent.trim().split(/\s+/),n=words.length,frag=d.createDocumentFragment();
+      words.forEach(function(t,i){var s=d.createElement('span');s.className='w';s.textContent=t;var a=10+30*i/n,b=10+30*(i+1)/n;s.style.animationRange='cover '+a.toFixed(2)+'% cover '+b.toFixed(2)+'%';frag.appendChild(s);if(i<n-1)frag.appendChild(d.createTextNode(' '))});
+      wp.textContent='';wp.appendChild(frag);
+    },{rootMargin:'0px 0px 30% 0px'});wio.observe(wp);
+  }
+  /* 3. videos: lazy sources, muted autoplay at >=50% in view, pause when out */
+  var c=navigator.connection,slow=!!(c&&(c.saveData||/2g/.test(c.effectiveType||''))),auto=!reduce&&!slow;
+  function load(v){if(v.dataset.loaded)return;v.dataset.loaded='1';Array.prototype.forEach.call(v.querySelectorAll('source[data-src]'),function(s){s.src=s.getAttribute('data-src')});v.load()}
+  function tryPlay(v){var p=v.play();if(p&&p.catch)p.catch(function(){})}
+  each('.vphone',function(fr){
+    var v=fr.querySelector('video'),b=fr.querySelector('.play'),bar=fr.querySelector('.vbar i'),raf=0;
+    function tick(){if(v.duration)bar.style.transform='scaleX('+(v.currentTime/v.duration)+')';raf=requestAnimationFrame(tick)}
+    v.addEventListener('playing',function(){cancelAnimationFrame(raf);tick()});
+    v.addEventListener('pause',function(){cancelAnimationFrame(raf)});
+    b.addEventListener('click',function(){
+      each('.vphone video',function(o){if(o!==v&&!o.muted){o.muted=true}});
+      load(v);v.dataset.user='1';v.muted=false;v.controls=true;try{v.currentTime=0}catch(e){}
+      tryPlay(v);fr.classList.add('is-user');v.focus({preventScroll:true});
+    });
+  });
+  function startVideos(){
+    if(!hasIO)return;
+    var vio=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;
+      if(e.intersectionRatio>=.5){if(auto&&!v.dataset.user){load(v);tryPlay(v)}}
+      else if(!v.paused&&(!v.dataset.user||!e.isIntersecting)){v.pause()}
+    })},{threshold:[0,.5]});
+    var pio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&auto){load(e.target);pio.unobserve(e.target)}})},{rootMargin:'300px 0px'});
+    each('video[data-lazy]',function(v){vio.observe(v);pio.observe(v)});
+  }
+  if(d.readyState==='complete')setTimeout(startVideos,400);else w.addEventListener('load',function(){setTimeout(startVideos,400)});
+  /* 4. mobile bottom bar steps aside while the form is on screen */
+  var mb=d.getElementById('mbar'),st=d.getElementById('start');
+  if(mb&&st&&hasIO){new IntersectionObserver(function(es){mb.classList.toggle('is-off',es[0].isIntersecting)},{threshold:.05}).observe(st)}
+})();
+</script>
 <script data-goatcounter="https://velvetclip.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </body>
