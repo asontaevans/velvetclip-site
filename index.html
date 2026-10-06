@@ -131,16 +131,18 @@ form.intake button{border:0;cursor:pointer;justify-self:start}
   <div class="pilot">
     <h2>Try it first: 3 free sample videos</h2>
     <p class="sub" style="margin-bottom:18px">We'll make 3 short videos for your spa, with your name, services and style. No card, no call required. If you like them, you can start with a <strong>$297 pilot month</strong> (one-time payment, no auto-renewal). If not, keep the videos.</p>
-    <form class="intake" id="intake" action="mailto:hello@velvetclip.com?subject=Free%20sample%20videos%20for%20my%20med%20spa" method="post" enctype="text/plain" data-goatcounter-click="intake-submit">
+    <form class="intake" id="intake" action="https://formspree.io/f/xnpjnqak" method="POST" data-goatcounter-click="intake-submit">
       <label>Your name<input name="name" autocomplete="name" required></label>
-      <label>Spa name<input name="spa" autocomplete="organization" required></label>
+      <label>Spa name<input name="spa_name" autocomplete="organization" required></label>
       <label>Email<input name="email" type="email" autocomplete="email" required></label>
       <label>City, state<input name="city" placeholder="e.g. Austin, TX"></label>
-      <label class="full">Website or Instagram<input name="site" placeholder="yourspa.com or @yourspa"></label>
-      <label class="full">Services to feature (optional)<textarea name="services" placeholder="e.g. Botox, HydraFacial, a fall promo"></textarea></label>
+      <label class="full">Website or Instagram<input name="website" placeholder="yourspa.com or @yourspa"></label>
+      <label class="full">Services to feature (optional)<textarea name="message" placeholder="e.g. Botox, HydraFacial, a fall promo"></textarea></label>
+      <input type="hidden" name="_subject" value="New VelvetClip sample request">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
       <button class="btn full" type="submit">Request my 3 free samples</button>
     </form>
-    <p class="fine" id="intake-note">Submitting opens your email app with your details filled in; just press send. No email app? Write to <a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a>. We use your details only to make and send your samples (<a href="/privacy/">Privacy</a>).</p>
+    <p class="fine" id="intake-note">Prefer email? Write to <a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a>. We use your details only to make and send your samples (<a href="/privacy/">Privacy</a>).</p>
     <div class="or-pay">
       <p style="margin:0 0 10px"><strong>Already seen our samples?</strong> Start the pilot month now.</p>
       <a class="btn ghost" href="https://buy.stripe.com/bJe00i5O8dd0fqwgvh3sI04" data-goatcounter-click="stripe-pilot">Start the $297 pilot</a>
@@ -148,7 +150,7 @@ form.intake button{border:0;cursor:pointer;justify-self:start}
   </div>
 </div></section>
 <script>
-(function(){var f=document.getElementById('intake');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(f),L=[['Name','name'],['Spa','spa'],['Email','email'],['City, state','city'],['Website / Instagram','site'],['Services to feature','services']],b='Hi VelvetClip, please make 3 free sample videos for my spa.\n\n';L.forEach(function(x){b+=x[0]+': '+(d.get(x[1])||'')+'\n'});var sub='Free sample videos for '+(d.get('spa')||'my med spa');window.location.href='mailto:hello@velvetclip.com?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(b);document.getElementById('intake-note').innerHTML='<strong>Your email app should open now with everything filled in. Press send and we\'ll reply within one US business day.</strong> Nothing opened? Email <a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a>.';});})();
+(function(){var f=document.getElementById('intake'),n=document.getElementById('intake-note');if(!f||!window.fetch)return;f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button[type=submit]');b.disabled=true;fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){if(!r.ok)throw 0;f.reset();f.style.display='none';n.innerHTML='<strong>Thanks! We\'ll reply within 1 business day.</strong>';}).catch(function(){b.disabled=false;n.innerHTML='<strong>Sorry, something went wrong sending your request.</strong> Please email <a href="mailto:hello@velvetclip.com">hello@velvetclip.com</a> instead.';});});})();
 </script>
 
 <section id="faq"><div class="wrap">
