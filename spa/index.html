@@ -6,13 +6,24 @@
 <meta name="robots" content="noindex, nofollow">
 <title>VelvetClip | Sample videos for med spas</title>
 <link rel="canonical" href="https://velvetclip.com/samples/">
-<meta http-equiv="refresh" content="1; url=/samples/">
+<noscript><meta http-equiv="refresh" content="4; url=/samples/?utm_source=email"></noscript>
 </head>
 <body style="font-family:system-ui,sans-serif;text-align:center;padding:3rem 1rem">
 <p>Taking you to VelvetClip sample videos&hellip;</p>
-<p><a href="/samples/">Continue to the samples page</a></p>
-<script>setTimeout(function(){location.replace('/samples/');},800);</script>
+<p><a href="/samples/?utm_source=email">Continue to the samples page</a></p>
 <script data-goatcounter="https://velvetclip.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  var dest='/samples/?utm_source=email', start=Date.now(), done=false;
+  function go(){ if(done) return; done=true; location.replace(dest); }
+  // Wait for GoatCounter to load (it counts on load), then give the beacon ~2s.
+  (function waitGC(){
+    if (window.goatcounter && window.goatcounter.count) { setTimeout(go, 2000); }
+    else if (Date.now()-start < 4000) { setTimeout(waitGC, 100); }
+    else { go(); }
+  })();
+})();
+</script>
 </body>
 </html>
